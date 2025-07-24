@@ -41,6 +41,9 @@ uv run claude-code-proxy
 
 # Or with docker
 docker run -d -p 8082:8082 zimpel1/claude-code-proxy-enhance:latest
+
+# Persistent configuration
+docker run -d -p 8082:8082 -v ~/configs:/app/configs zimpel1/claude-code-proxy-enhance:latest 
 ```
 
 ### 3. Configure via Web UI
