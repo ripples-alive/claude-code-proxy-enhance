@@ -33,7 +33,7 @@ class Config:
         if "OPENAI_BASE_URL" in data: self.openai_base_url = data["OPENAI_BASE_URL"]
         if "AZURE_API_VERSION" in data: self.azure_api_version = data["AZURE_API_VERSION"]
         if "BIG_MODEL" in data: self.big_model = data["BIG_MODEL"]
-        if "MIDDLE_MODEL" in data: self.middle_model = data.get("MIDDLE_MODEL", data.get("BIG_MODEL")) # Fallback
+        if "MIDDLE_MODEL" in data: self.middle_model = data.get("BIG_MODEL") # Fallback
         if "SMALL_MODEL" in data: self.small_model = data["SMALL_MODEL"]
         if "MAX_TOKENS_LIMIT" in data: self.max_tokens_limit = int(data["MAX_TOKENS_LIMIT"])
         if "MIN_TOKENS_LIMIT" in data: self.min_tokens_limit = int(data["MIN_TOKENS_LIMIT"])
