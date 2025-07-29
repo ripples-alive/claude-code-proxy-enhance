@@ -24,7 +24,7 @@ class ModelManager:
         elif 'opus' in model_lower:
             return self.config.big_model
         else:
-            # Default to big model for unknown models
-            return self.config.big_model
+            # Default as-is for unknown models
+            return claude_model
 
 model_manager = ModelManager(config)
